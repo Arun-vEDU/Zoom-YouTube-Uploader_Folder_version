@@ -1,0 +1,7 @@
+credentials/
+client_secrets.json
+token.pickle
+processed_videos.txt
+*.pickle
+__pycache__
+.git

@@ -14,10 +14,10 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
 # ===== CONFIGURATION =====
-WATCH_FOLDER = r"C:\Users\Arunya Senadeera\Asian Institute of Technology\jirapas Sangsue - ZOOMRecording"  # Folder to watch for new videos
-CLIENT_SECRETS_FILE = "client_secrets.json"  # Your OAuth credentials file
-TOKEN_FILE = "token.pickle"  # Stores authentication token
-PROCESSED_FILES_LOG = "processed_videos.txt"  # Keeps track of uploaded videos
+WATCH_FOLDER = os.environ.get("WATCH_FOLDER", r"C:\Users\Arunya Senadeera\Asian Institute of Technology\jirapas Sangsue - ZOOMRecording")
+CLIENT_SECRETS_FILE = os.environ.get("CLIENT_SECRETS_FILE", "client_secrets.json")
+TOKEN_FILE = os.environ.get("TOKEN_FILE", "token.pickle")
+PROCESSED_FILES_LOG = os.environ.get("PROCESSED_FILES_LOG", "processed_videos.txt")
 
 # Video settings
 DEFAULT_TITLE = "Zoom Recording"  # Default title if filename isn't descriptive
